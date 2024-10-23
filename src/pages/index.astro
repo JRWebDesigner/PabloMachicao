@@ -6,15 +6,15 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<div class="h-[90vh] bg-center bg-[url('/banner.jpg')] bg-no-repeat bg-cover flex flex-col justify-start items-start relative text-white">
 			<div class="bg-black w-full h-full absolute opacity-30"></div>
-			<div class="flex flex-col relative w-[44%] h-full justify-center items-start p-6">
-				<span class="text-7xl font-bold">
+			<div class="flex flex-col relative md:w-[44%] h-full justify-center items-center p-6">
+				<span class="text-4xl md:text-7xl font-bold">
 					¿ESTÁS LISTO
 					PARA EMPEZAR
 					EL VIAJE?
 				</span>
 				<a href="https://wa.link/28rewy" target="_blank" class="absolute bottom-10 rounded-3xl left-4 text-center text-3xl w-[50%] bg-sky-600 text-white font-semibold px-4 py-2">Contacto</a>
 			</div>
-			<span class="absolute right-4 bottom-3 text-5xl text-center">
+			<span class="hidden md:block absolute right-4 bottom-3 text-lg md:text-5xl text-center">
 				<i>Pablo Machicao</i>
 				<br>
 				Coach Life
@@ -24,10 +24,10 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 		<div class="min-h-[50vh]">
-			<h2 class="py-7 text-6xl text-blue-700 text-center">
+			<h2 class="py-7 text-3xl md:text-6xl text-blue-700 text-center">
 				PIENSA SIENTE Y ACTUA 
 			</h2>
-			<div class="grid grid-cols-[1fr_1fr_2fr] text-center text-3xl w-[90%] m-auto font-semibold gap-7">
+			<div class="flex flex-col md:grid md:grid-cols-[1fr_1fr_2fr] text-center text-3xl w-[90%] m-auto font-semibold gap-7">
 				<div class="p-5 flex flex-col justify-start items-center">
 					<img class="h-[280px] rounded-3xl" src="/foco2.jpg" alt="siente">
 					<p>
@@ -66,7 +66,7 @@ import Layout from '../layouts/Layout.astro';
 		<span class="w-full grid place-items-center text-4xl mt-20">
 			JAMÁS TE RINDAS
 		</span>
-		<div class="py-4 my-20 px-3 flex justify-around items-center">
+		<div class="py-4 my-20 px-3 flex flex-wrap-reverse justify-center md:justify-around items-center">
 			<p class="font-semibold text-3xl text-left w-[50%]">
 				Mi nombre es Pablo, soy coach de vida certificado y te
 acompañaré en este proceso de transformación,
@@ -114,8 +114,8 @@ al logro de tus metas.
 		</div>
 	</main>
 	<footer>
-		<h2 class="pt-10 text-5xl text-center text-blue-700 font-semibold ">CONTÁCTAME</h2>
-		<div class="grid grid-cols-3 gap-20 text-xl w-[80%] m-auto">
+		<h2 class="py-10 text-5xl text-center text-blue-700 font-semibold ">CONTÁCTAME</h2>
+		<div class="flex flex-col md:grid md:grid-cols-3 gap-20 text-xl w-[80%] m-auto">
 			<div class="bg-white p-4 text-center rounded-3xl grid place-items-center">
 				<strong>Formulario de
 					contacto</strong>
