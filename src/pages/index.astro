@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Welcome to Astro.">
 	<main>
 		<div class="h-[90vh] bg-center bg-[url('/banner.jpg')] bg-no-repeat bg-cover flex flex-col justify-start items-start relative text-white">
-			<div class="bg-yellow-100 w-full h-full absolute opacity-15"></div>
+			<div class="bg-black w-full h-full absolute opacity-10"></div>
 			<div class="flex flex-col relative md:w-[44%] h-full justify-center items-center p-6">
 				<span class="text-4xl md:text-7xl font-bold">
 					¿ESTÁS LISTO
@@ -24,12 +24,12 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 		</div>
 		<div class="min-h-[50vh]">
-			<h2 class="py-7 text-3xl md:text-5xl text-blue-700 text-center">
+			<h2 class="py-7 text-3xl md:text-5xl text-blue-700 text-center font-bold">
 				PIENSA SIENTE Y ACTUA 
 			</h2>
-			<div class="flex flex-col md:grid md:grid-cols-[1fr_1fr_2fr] text-center text-2xl w-[90%] m-auto font-semibold gap-7">
-				<div class="p-5 flex flex-col justify-start items-center">
-					<img class="h-[280px] rounded-3xl" src="/foco2.jpg" alt="siente">
+			<div class="flex flex-col justify-center items-center md:grid md:grid-cols-[1fr_1fr_2fr] text-center md:text-2xl w-[90%] m-auto font-semibold gap-2 md:gap-7">
+				<div class="p-3 md:p-5 flex flex-col justify-start items-center h-full">
+					<img class="h-[160px] md:h-[280px] rounded-3xl" src="/foco2.jpg" alt="siente">
 					<p>
 						Solo tú,
 						puedes darle un
@@ -37,8 +37,8 @@ import Layout from '../layouts/Layout.astro';
 
 					</p>
 				</div>
-				<div class="p-5 flex flex-col justify-start items-center">
-					<img class="h-[280px] rounded-3xl" src="/foco1.jpg" alt="piensa">
+				<div class="p-3 md:p-5 flex flex-col justify-start items-center">
+					<img class="h-[160px] md:h-[280px] rounded-3xl" src="/foco1.jpg" alt="piensa">
 					<p>
 						Lograr encontrar
 						en cada aprendizaje,
@@ -46,7 +46,7 @@ import Layout from '../layouts/Layout.astro';
 						brillar.
 					</p>
 				</div>
-				<div class="p-5 flex flex-col justify-start items-center">
+				<div class="p-3 md:p-5 flex flex-col justify-start items-center">
 					<p>
 						Alguna vez te preguntaste,
 						¿Que hace que me despierte cada día?,
@@ -63,11 +63,11 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 			</div>  
 		</div>
-		<span class="w-full grid place-items-center text-3xl mt-20">
+		<span class="w-full grid place-items-center text-3xl">
 			¡ JAMÁS TE RINDAS !
 		</span>
-		<div class="py-4 my-20 px-3 flex flex-wrap-reverse justify-center md:justify-around items-center">
-			<p class="font-semibold text-2xl text-left w-[50%]">
+		<div class="my-10 px-3 flex flex-wrap-reverse gap-7 md:gap-10 justify-center items-center">
+			<p class="font-semibold md:text-2xl text-left w-[80%] md:w-[50%]">
 				Mi nombre es Pablo, soy coach de vida certificado y te
 				acompañaré en este proceso de transformación,
 				ayudándote a sacar lo mejor de ti, compartiendo herramientas que te ayudarán en diferentes
@@ -77,45 +77,89 @@ import Layout from '../layouts/Layout.astro';
 				que puedas sentir y ver los cambios que nos ayudarán
 				al logro de tus metas.
 			</p>
-			<img src="/foto.png" alt="foto de perfil">
+			<img class="md:hidden float-right w-[180px] rounded-full" src="/foto.png" alt="foto de perfil">
+			<img class="hidden md:flex md:w-auto rounded-full" src="/foto.png" alt="foto de perfil">
 		</div>
 		<h2 class="pt-10 text-4xl text-center text-blue-700 font-semibold">
 			¿Quien necesita un coach de vida?
 		</h2>
-		<div class="flex flex-wrap gap-8 justify-center items-center font-bold mt-10 text-[1rem]">
-			<div class="w-[197px] h-[197px] grid place-items-center bg-white py-10 text-center rounded-[100%]">Personas en
-				transiciones
-				importantes</div>
-			<div class="w-[197px] h-[197px] grid place-items-center bg-white py-10 text-center rounded-[100%]">Personas
-				que buscan
-				un mayor
-				equilibrio</div>
-			<div class="w-[197px] h-[197px] grid place-items-center bg-white py-10 text-center rounded-[100%]">Personas con
-				bloqueos o
-				creencias
-				limitantes</div>
-			<div class="w-[197px] h-[197px] grid place-items-center bg-white py-10 text-center rounded-[100%]">Personas que
-				desean mejorar
-				su bienestar
-				emocional
+		<div class="flex flex-wrap gap-8 justify-center items-center font-bold mt-10 text-[1rem] md:w-[50%] m-auto">
+			
+				<div class="w-[197px] h-[197px] relative inline-block p-4 bg-white rounded-full shadow-xl">
+					<!-- Contenedor externo para el borde degradado -->
+					<div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 p-[2px]">
+					  <!-- Contenedor interno para el fondo blanco -->
+					  <div class="flex items-center justify-center h-full w-full bg-white rounded-full">
+						<span class="text-center text-black font-bold">Personas en
+							transiciones
+							importantes</span>
+					  </div>
+					</div>
+				  </div>
+				<div class="w-[197px] h-[197px] relative inline-block p-4 bg-white rounded-full shadow-xl">
+					<!-- Contenedor externo para el borde degradado -->
+					<div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 p-[2px]">
+					  <!-- Contenedor interno para el fondo blanco -->
+					  <div class="flex items-center justify-center h-full w-full bg-white rounded-full">
+						<span class="text-center text-black font-bold">Personas que buscan <br>un mayor equilibrio</span>
+					  </div>
+					</div>
+				  </div>
+				<div class="w-[197px] h-[197px] relative inline-block p-4 bg-white rounded-full shadow-xl">
+					<!-- Contenedor externo para el borde degradado -->
+					<div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 p-[2px]">
+					  <!-- Contenedor interno para el fondo blanco -->
+					  <div class="flex items-center justify-center h-full w-full bg-white rounded-full">
+						<span class="text-center text-black font-bold">Personas con<br>bloqueos o<br>creencias limitantes</span>
+					  </div>
+					</div>
 				</div>
-			<div class="w-[197px] h-[197px] grid place-items-center bg-white py-10 text-center rounded-[100%]">Personas que
-				sienten que
-				perdieron su
-				propósito
+				<div class="w-[197px] h-[197px] relative inline-block p-4 bg-white rounded-full shadow-xl">
+					<!-- Contenedor externo para el borde degradado -->
+					<div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 p-[2px]">
+					  <!-- Contenedor interno para el fondo blanco -->
+					  <div class="flex items-center justify-center h-full w-full bg-white rounded-full">
+						<span class="text-center text-black font-bold">Personas que
+							desean mejorar
+							su bienestar
+							emocional</span>
+					  </div>
+					</div>
 				</div>
-			<div class="w-[197px] h-[197px] grid place-items-center bg-white py-10 text-center rounded-[100%]">Personas
-				que no
-				logran
-				alcanzar sus
-				metas
-			</div>
+				<div class="w-[197px] h-[197px] relative inline-block p-4 bg-white rounded-full shadow-xl">
+					<!-- Contenedor externo para el borde degradado -->
+					<div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 p-[2px]">
+					  <!-- Contenedor interno para el fondo blanco -->
+					  <div class="flex items-center justify-center h-full w-full bg-white rounded-full">
+						<span class="text-center text-black font-bold">Personas que
+							sienten <br> que
+							perdieron su
+							propósito</span>
+					  </div>
+					</div>
+				</div>
+				<div class="w-[197px] h-[197px] relative inline-block p-4 bg-white rounded-full shadow-xl">
+					<!-- Contenedor externo para el borde degradado -->
+					<div class="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 p-[2px]">
+					  <!-- Contenedor interno para el fondo blanco -->
+					  <div class="flex items-center justify-center h-full w-full bg-white rounded-full">
+						<span class="text-center text-black font-bold">Personas
+							que <br> no
+							logran
+							alcanzar sus
+							metas</span>
+					  </div>
+					</div>
+				</div>
 		</div>
 	</main>
 	<footer>
 		<h2 class="py-10 text-4xl text-center text-blue-700 font-semibold ">CONTÁCTAME</h2>
-		<div class="flex flex-col md:grid md:grid-cols-3 gap-20 text-xl w-[80%] m-auto">
-			<div class="bg-white p-4 text-center rounded-3xl grid place-items-center">
+		<div class="flex flex-col md:grid md:grid-cols-3 gap-20 text-xl w-[80%] m-auto pt-40 pb-5">
+			<div class="bg-white py-20 text-center rounded-3xl flex flex-col justify-center items-center relative">
+				<div class="absolute rounded-full p-3 bg-white -top-[30%] md:-top-[44%]">
+					<img class="rounded-full w-[120px] h-[120px] md:w-[170px] md:h-[170px]" src="/oceano.jpg" alt="oceano">
+				</div>
 				<strong>Formulario de
 					contacto</strong>
 				<span>
@@ -125,13 +169,19 @@ import Layout from '../layouts/Layout.astro';
 				lo mas rápido posible
 				</span>
 			</div>
-			<div class="bg-white p-4 text-center rounded-3xl grid place-items-center">
+			<div class="bg-white py-4 text-center rounded-3xl flex flex-col justify-center items-center relative mt-20">
+				<div class="absolute rounded-full p-3 bg-white -top-[110%] md:-top-[44%]">
+					<img class="rounded-full w-[120px] h-[120px] md:w-[170px] md:h-[170px]" src="/fuego.jpg" alt="fuego">
+				</div>
 				<strong>Agenda tu cita</strong>
 				<span>
 					Puede ser presencial o también online.
 				</span>
 			</div>
-			<div class="bg-white p-4 text-center rounded-3xl grid place-items-center">
+			<div class="bg-white py-4 text-center rounded-3xl flex flex-col justify-center items-center relative mt-20">
+				<div class="absolute rounded-full p-3 bg-white -top-[58%] md:-top-[44%]">
+					<img class="rounded-full w-[120px] h-[120px] md:w-[170px] md:h-[170px]" src="/semilla.jpg" alt="semilla">
+				</div>
 				<strong>Talleres grupales</strong>
 				<ul>
 					<li>Propósito de vida.</li>
@@ -142,6 +192,14 @@ import Layout from '../layouts/Layout.astro';
 					<li>Amor Propio.</li>
 				</ul>
 			</div>
+		</div>
+		<div class="flex justify-center items-center gap-10 ">
+			<a href="https://wa.link/28rewy">
+				<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+			</a>
+			<a href="https://www.facebook.com/@pablocoachlife/?mibextid=LQQJ4d ">
+				<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+			</a>
 		</div>
 	</footer>
 </Layout>
