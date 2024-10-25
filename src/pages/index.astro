@@ -155,7 +155,7 @@ import Layout from '../layouts/Layout.astro';
 	<footer>
 		<h2 class="pt-10 text-4xl text-center text-blue-700 font-[400] ">Contáctame</h2>
 		<div class="flex flex-col md:grid md:grid-cols-3 place-items-center gap-20 text-xl w-[80%] m-auto pt-36 pb-5">
-			<div id="a1" class="translate-y-14 bg-white py-20 text-center rounded-3xl flex flex-col justify-center items-center relative px-3">
+			<div id="a1" class="actForm translate-y-14 bg-white py-20 text-center rounded-3xl flex flex-col justify-center items-center relative px-3">
 				<div class="absolute rounded-full p-3 bg-white -top-[30%] md:-top-[44%]">
 					<img class="rounded-full w-[120px] h-[120px] md:w-[170px] md:h-[170px]" src="/oceano.jpg" alt="oceano">
 				</div>
@@ -207,6 +207,30 @@ import Layout from '../layouts/Layout.astro';
 			</a>
 		</div>
 	</footer>
+	<div id="modal" class="hidden top-0 fixed w-full min-h-screen bg-black bg-opacity-65 justify-center items-center">
+		<svg  id="x" xmlns="http://www.w3.org/2000/svg"  width="44"  height="44"  viewBox="0 0 24 24"  fill="none"  stroke="#000"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x absolute top-[5%] right-16"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+			<form action="">
+				<div class="flex flex-col">
+					<label for="name"><strong class="text-white">NOMBRE</strong></label>
+					<input class="p-6 text center md:min-w-[800px] border-2 border-black rounded-lg max-h-[40px]" type="text" name="name" id="name" placeholder="introduzca su nombre..." required>
+				</div>
+				<div class="flex flex-col">
+					<label for="phone"><strong class="text-white">TELÉFONO</strong></label>
+					<input class="p-6 text center md:min-w-[800px] border-2 border-black rounded-lg max-h-[40px]" type="tel" name="phone" id="phone" placeholder="introduzca teléfono..." required>
+				</div>
+				<div class="flex flex-col">
+					<label for="email"><strong class="text-white">CORREO ELECTRONICO</strong></label>
+					<input class="p-6 text center md:min-w-[800px] border-2 border-black rounded-lg max-h-[40px]" type="email" name="correo" id="correo" placeholder="introduzca su correo..." required>
+				</div>
+				<div class="flex flex-col">
+					<label for="mensaje"><strong class="text-white">MENSAJE</strong></label>
+					<textarea placeholder="Mensaje... " class="p-6 md:min-w-[800px] border-2 border-black rounded-xl min-h-[100px]" name="mensaje" id="mensaje"></textarea>
+				</div>
+				<button class="w-[100%] mt-10 rounded-2xl bg-blue-600 text-white font-bold text-2xl md:text-4xl" type="submit">
+						ENVIAR
+				</button>
+			</form>
+		</div>
 </Layout>
 <style>
 	#flecha{
@@ -240,7 +264,10 @@ import Layout from '../layouts/Layout.astro';
 		transition:2s all ;
 	}
 </style>
-<script>
+<script>	
+	const actForm=document.querySelector('.actForm')
+	const x=document.getElementById('x')
+	const modal=document.getElementById('modal')
 	const circles=document.querySelectorAll('.circles')
 	const nextBs=document.querySelectorAll('.nextB')
 	const texts=document.querySelectorAll('.text')
@@ -287,4 +314,11 @@ import Layout from '../layouts/Layout.astro';
 	observerT.observe(a1)
 	observerT.observe(a2)
 	observerT.observe(a3)
+
+	actForm.addEventListener('click',()=>{
+		modal.classList.replace('hidden','flex')
+	})
+	x.addEventListener('click',()=>{
+		modal.classList.replace('flex','hidden')
+	})
 </script>
